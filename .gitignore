@@ -1,7 +1,10 @@
 ##basic
 .env
 package-lock.json
-
+dist
+dist-vite
+dist-electron
+temp
 
 # Logs
 logs
