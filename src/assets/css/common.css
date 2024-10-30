@@ -1,0 +1,374 @@
+@charset "utf-8";
+/* CSS Document */
+/* 기본폰트 : Spoqa Han Sans (고딕)
+font-family: 'Noto Sans KR', sans-serif;
+굵기 : 300-light,400-normal,700-bold
+폰트는 서버 세팅 완료 후 서버 내에서 사용하도록 세팅예정
+*/
+/*
+이 css는 리셋, 폰트, 기본 태그만 다룹니다.
+*/
+/* reset - global defaults */
+/* 베트남어 표현 이슈로 noto sans 추가 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  word-break: keep-all;
+  box-sizing: border-box;
+  position: relative;
+
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: none;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  -ms-overflow-x: hidden;
+  scroll-behavior: auto;
+}
+html,
+body {
+  position: relative;
+  -webkit-text-size-adjust: none;
+  box-sizing: border-box;
+  word-break: keep-all;
+  scroll-behavior: auto;
+}
+/* html, body 기본 흰배경의 사이트일때 */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  -webkit-text-size-adjust: none;
+  box-sizing: border-box;
+  word-break: keep-all;
+  scroll-behavior: auto;
+  font-family: Pretendard;
+  font-size: 16px;
+  color: #262626;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="submit"],
+input[type="password"],
+input[type="image"],
+input[type="button"],
+textarea {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
+button,
+input,
+input[type="radio"],
+input[type="checkbox"],
+select,
+textarea {
+  vertical-align: middle;
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+img,
+video,
+audio,
+object,
+embed,
+iframe {
+  max-width: 100%;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+blockquote,
+table,
+th,
+td,
+legend,
+button,
+code,
+p,
+select {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img,
+abbr,
+acronym {
+  border: 0 none;
+}
+fieldset {
+  display: block;
+}
+label {
+  vertical-align: middle;
+}
+textarea {
+  width: 100%;
+  border: 0;
+  overflow-y: auto;
+  resize: none;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style: none outside;
+}
+li {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-size: 100%;
+  font-weight: bold;
+}
+hr,
+legend,
+caption,
+hr {
+  visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -1000em;
+}
+/* 추가 리셋 */
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+  transition: all 0.2s ease-in 0s;
+}
+a:active,
+a:focus,
+a:hover {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+a[href^="tel:"] {
+  cursor: text;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+figure {
+  margin: 0;
+}
+button {
+  border: 0 none;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+button:active,
+button:focus {
+  border: none;
+  outline: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+table {
+  width: 100%;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+input::-ms-clear {
+  display: none;
+}
+section {
+  position: relative;
+}
+
+/* IE10 이상을 위한 css */
+input::placeholder,
+textarea::placeholder {
+  color: #b6b6b6;
+  opacity: 1;
+} /* 파이어폭스에서 뿌옇게 나오는 현상을 방지하기 위한 css */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #b6b6b6;
+}
+/* IE */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #b6b6b6;
+}
+/* Firefox */
+input:-mos-input-placeholder {
+  color: #b6b6b6;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+} /* WebKit browsers */
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+/* Mozilla Firefox 4 to 18 */
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+/* Mozilla Firefox 19+ */
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+} /* Internet Explorer 10+ */
+/* IE9 이하를 위한 css */
+.placeholder {
+  color: #ddd;
+}
+
+/* ios pinch-zoom */
+body {
+  touch-action: pan-x pan-y;
+}
+body.pinch-zoom {
+  touch-action: auto;
+}
+/* 웹접근성을 위한 글자 숨김 css */
+.blind,
+legend,
+caption {
+  position: absolute;
+  z-index: -10;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  font-size: medium;
+  line-height: normal;
+  word-break: break-all;
+}
+
+/* font */
+/* 기본폰트 : LG폰트로 세팅 */
+/* font-family : "Spoqa"; */
+@font-face {
+  font-family: "Nanum";
+  font-weight: 900;
+  src: local("NanumSquareNeoOTF-Eb"), local("NanumSquareNeoOTF-Eb"),
+    url("../fonts/NanumSquareNeoOTF-Eb.woff2") format("woff2"),
+}
+
+@font-face {
+  font-family: "Nanum";
+  font-weight: 700;
+  src: local("NanumSquareNeoOTF-Bd"), local("NanumSquareNeoOTF-Bd"),
+    url("../fonts/NanumSquareNeoOTF-Bd.woff2") format("woff2"),
+    url("../fonts/NanumSquareNeoOTF-Bd.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "Nanum";
+  font-weight: 500;
+  src: local("Pretendard Regular"), local("NanumSquareNeoOTF-Rg"),
+    url("../fonts/NanumSquareNeoOTF-Rg.woff2") format("woff2"),
+    url("../fonts/NanumSquareNeoOTF-Rg.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "Nanum";
+  font-weight: 400;
+  src: local("NanumSquareNeoOTF-Lt"), local("NanumSquareNeoOTF-Lt"),
+    url("../fonts/NanumSquareNeoOTF-Lt.woff2") format("woff2"),
+    url("../fonts/NanumSquareNeoOTF-Lt.woff") format("woff"),
+}
+@font-face {
+  font-family: "Suite";
+  font-weight: 700;
+  src: local("SUITE-Bold"), local("SUITE-Bold"),
+    url("../fonts/SUITE-Bold.woff2") format("woff2"),
+}
+@font-face {
+  font-family: "Maple";
+  font-weight: 700;
+  src: local("Maplestory_Bold"), local("Maplestory_Bold"),
+    url("../fonts/Maplestory_Bold.woff2") format("woff2"),
+}
+.inner_1440 {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.inner_1920 {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
